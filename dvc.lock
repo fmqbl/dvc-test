@@ -31,8 +31,8 @@ stages:
     cmd: python3 code/train.py
     deps:
     - path: code/train.py
-      md5: cc8071152859b704ebb8991470dd3ea1
-      size: 1935
+      md5: 8e59d151fc6ce4efc90f4e84bf683483
+      size: 1936
     - path: data/test_prepared.pkl
       md5: c00ffdbb3c3104119af756a8c46c013c
       size: 32555
