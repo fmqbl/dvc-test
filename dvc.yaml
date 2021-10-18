@@ -6,3 +6,24 @@ stages:
     outs:
     - data/train.csv
     - data/test.csv
+  prepare:
+    cmd: python3 code/prepare.py
+    deps:
+    - data/test.csv
+    - data/train.csv
+    outs:
+    - data/test_prepared.pkl  # prepare the test and train pkl to be used by training script
+    - data/train_prepared.pkl
+  train:
+    cmd: python3 code/train.py
+    deps:
+    - code/train.py
+    - data/test_prepared.pkl # directories for test and train pkls
+    - data/train_prepared.pkl
+    params:
+    - train.solver
+    metrics: # to store the metrics result
+    - metrics/metrics.json:
+        cache: false
+    outs:
+    - models/bestModel.joblib
