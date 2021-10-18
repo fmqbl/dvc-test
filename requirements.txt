@@ -1,0 +1,8 @@
+#libraries to be installed - dependencies
+dvc
+kaggle
+pandas
+numpy
+jsons
+joblib
+scikit-learn
