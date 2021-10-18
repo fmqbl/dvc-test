@@ -27,3 +27,12 @@ stages:
         cache: false
     outs:
     - models/bestModel.joblib
+  # Inference - Final Stage
+  inference:
+    cmd: python3 code/inference.py
+    deps:
+    - code/inference.py
+    - models/bestModel.joblib
+    - data/test_prepared.pkl
+    outs:
+    - inference/predictions.csv
