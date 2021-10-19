@@ -44,11 +44,11 @@ stages:
         train.solver: newton-cg
     outs:
     - path: metrics/metrics.json
-      md5: bafb81e41f66de16e50c45906b6d3615
+      md5: 5868212ceddd0ecd0275fcfe724b4fec
       size: 115
     - path: models/bestModel.joblib
-      md5: c337583ea7ee7b0de78b1e9e31a27cab
-      size: 94487
+      md5: 6275402aaeb9eb1588da45505b191e06
+      size: 75591
   inference:
     cmd: python3 code/inference.py
     deps:
@@ -59,8 +59,8 @@ stages:
       md5: c00ffdbb3c3104119af756a8c46c013c
       size: 32555
     - path: models/bestModel.joblib
-      md5: c337583ea7ee7b0de78b1e9e31a27cab
-      size: 94487
+      md5: 6275402aaeb9eb1588da45505b191e06
+      size: 75591
     outs:
     - path: inference/predictions.csv
       md5: a0c9436078c89a5851bdcba55bbe25ac
