@@ -4,7 +4,7 @@ prepare:
   seed: 20170428
 
 featurize:
-  max_features: 500
+  max_features: 450
   ngrams: 1
 
 train:
@@ -13,4 +13,4 @@ train:
   min_split: 2
   solver: 'newton-cg'
   criterion: 'entropy'
-  kernel: 'linear'
+  kernel: 'rbf'
