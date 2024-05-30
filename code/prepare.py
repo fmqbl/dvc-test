@@ -1,4 +1,5 @@
 # Get the data transform and store at destination to be used by models
+# prepare the data to be used for the inference
 import pandas as pd
 import numpy as np
 import time
