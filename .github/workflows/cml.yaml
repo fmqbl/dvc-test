@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     # optionally use a convenient Ubuntu LTS + DVC + CML image
     # container: docker://ghcr.io/iterative/cml:0-dvc2-base1
+    # These containers have been updated. Please follow the guidelines per latest images
     environment: KAGGLE
     steps:
       - uses: actions/checkout@v2
